@@ -1,5 +1,6 @@
 import { css, html, LitElement } from "lit";
 import { customElement, property, query } from "lit/decorators.js";
+import { classMap } from "lit/directives/class-map.js";
 
 type TodoItem = {
   value: string;
@@ -16,6 +17,7 @@ export class Todo extends LitElement {
       -ms-user-select: none;
       user-select: none;
       margin-bottom: 3px;
+      color: #777;
     }
 
     .completed {
@@ -56,9 +58,10 @@ export class Todo extends LitElement {
         (item) =>
           html`<ul>
             <li
-              class=${["todo-item", item.isComplete ? "completed" : ""].join(
-                " "
-              )}
+              class=${classMap({
+                "todo-item": true,
+                completed: item.isComplete,
+              })}
               @click=${() => this.toggleComplete(item)}
             >
               ${item.value}
