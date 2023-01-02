@@ -1,33 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <style>
-    body {
-      background: #fafafa;
-    }
-  </style>
-</head>
-<body>
-  <div id="demo"></div>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
 
-  <script type="module">
-    import { html, render } from 'lit';
-    import '../dist/src/my-element.js';
+    <script type="module">
+      import { html, render } from "lit";
+      // import "../dist/src/my-element.js";
+      import "../dist/src/todo/index.js";
 
-    const title = 'Hello owc World!';
-    render(
-      // html`
-      //   <lit-demo-bench .title=${title}>
-      //     some light-dom asas
-      //   </lit-demo-bench>
-      // `,
+      const title = "Hello owc World!";
+      render(
+        // html`
+        //  <my-element />
+        // `,
 
-      html`
-        <my-element></my-element>
-      `,
-      document.querySelector('#demo')
-    );
-  </script>
-</body>
+        html` <todo-element /> `,
+        document.querySelector("#demo")
+      );
+    </script>
+  </body>
 </html>
