@@ -1,0 +1,1 @@
+{"version":3,"file":"lit-demo-bench.js","sourceRoot":"","sources":["../../src/lit-demo-bench.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,mBAAmB,CAAC;AAEjD,MAAM,CAAC,cAAc,CAAC,MAAM,CAAC,gBAAgB,EAAE,YAAY,CAAC,CAAC","sourcesContent":["import { LitDemoBench } from './LitDemoBench.js';\n\nwindow.customElements.define('lit-demo-bench', LitDemoBench);\n"]}
