@@ -17,6 +17,12 @@ export class MyElement extends LitElement {
       height: 50px;
       background-color: cyan;
     }
+
+    .logo {
+      height: 30vmin;
+      pointer-events: none;
+      margin: 10px;
+    }
   `;
 
   @property()
@@ -52,7 +58,12 @@ export class MyElement extends LitElement {
     return html`
       <div>
         <h2>Hello world from Husny!</h2>
-        <h3>Let's do PWA with lit</h3>
+        <h3>Let's do PWA with lit html <a target="_blank" href="https://lit.dev/">Lit</a></h3>
+
+        <div> 
+          <img src="./logo.svg" class="logo" alt="logo" />
+        </div>
+
         <div class="box">
           <h3>Counter</h3>
           ${this.count}
@@ -72,7 +83,7 @@ export class MyElement extends LitElement {
         </div>
 
         <div class="box">
-          <div style=>
+          <div>
             Enable editing: 
             <input type="checkbox" @change=${this.toggleChecked} />
           </div>
@@ -84,13 +95,18 @@ export class MyElement extends LitElement {
 
 
         <div class="box">
-          <div style=>
+          <div>
             Hide
             <input type="checkbox" @change=${this.toggleHidden} />
           </div>
           </br>
           <div class="object" ?hidden=${this.isHidden}>
           </div> 
+        </div>
+
+        <div class="box">
+
+        
         </div>
       </div>
     `;
